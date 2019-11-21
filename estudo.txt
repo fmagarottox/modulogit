@@ -1,0 +1,34 @@
+1) Iniciando o GIT
+
+Entre no diretório que deseja controlar a versão e inicie o Git assim:
+~ git init
+
+Feito isso, seus arquivos ainda não estão sendo versionados, mas eles estão esperando para serem adicionados no estágio de controle. Para fazer isso digite o comando
+~ git add nome-do-arquivo-incluindo-extensão
+
+Se você precisa adicionar todos os arquivos do diretório, basta digitar:
+~ git add -A
+
+Saber o status do projeto é importante. Com o comando abaixo você consegue ver quais arquivos estão fora do controle, quais foram modificados e estão esperando por uma descrição de modificação etc:
+~ git status
+
+Voltando ao estágio anterior do adicionamento:
+~ git reset HEAD nome-do-arquivo
+
+Commit – Comitando:
+~ git commit -m "Mensagem do commit"
+
+
+2) Voltando commits a versões anteriores
+
+Voltando um commit e deixando o arquivo no estagio anterior:
+~ git reset HEAD~1 --soft
+
+Voltando um commit e excluindo o arquivo, deixando no estágio anterior:
+~ git reset HEAD~1 --hard
+
+Verificando o histórico de commits:
+~ git log
+
+Verificando em que branch você está
+~ git branch
