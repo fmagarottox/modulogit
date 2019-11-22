@@ -22,13 +22,25 @@ Commit – Comitando:
 2) Voltando commits a versões anteriores
 
 Voltando um commit e deixando o arquivo no estagio anterior:
-~ git reset HEAD~1 --soft
+~ git reset --soft (hash anterior)
 
 Voltando um commit e excluindo o arquivo, deixando no estágio anterior:
-~ git reset HEAD~1 --hard
+~ git reset --hard (hash anterior)
 
 Verificando o histórico de commits:
 ~ git log
 
 Verificando em que branch você está
 ~ git branch
+
+Criando um branch:
+~ git branch (nome)
+
+Mudando para o branch criado:
+~ git branch checkout (nome)
+
+Checando o que foi acrescentado no Sublime por exemplo:
+~ git diff
+
+Checar somente o arquivo que foi modificado:
+~ git diff --name-only
