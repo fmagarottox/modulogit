@@ -44,3 +44,32 @@ Checando o que foi acrescentado no Sublime por exemplo:
 
 Checar somente o arquivo que foi modificado:
 ~ git diff --name-only
+
+Checar somente um arquivo específico:
+~ git diff (nome do arquivo)
+
+Voltar o que tinha feito:
+~ git checkout HEAD -- (nome do arquivo)
+*Sempre que você faz uma alteração num arquivo ele precisará de um commit no bash,
+porém se você fez uma alteração no arquivo mas quer voltar pois não precisa mais
+você da este comando que retornará o que era antes*
+
+3) Conectando repositório local ao remoto
+
+Primeiro passo
+~ ssh-keygen -t rsa -b 4096 -C "seu_email@gmail.com"
+
+Segundo passo
+procurar a chave publica que provavelmente estará em
+C:/Users/filip/.ssh
+e joga no sublime pra poder ler e copiar
+
+Terceiro passo
+Vá no seu user no github > Settings > SSH and GPG Keys > New SSH Key e cola o código lá
+
+Quarto passo
+vá na pasta do seu computador onde você deu o primeiro comando init
+~ git remote add origin https://github.com/fmagarottox/modulogit.git
+~ git push -u origin master
+~ git remote -v
+
