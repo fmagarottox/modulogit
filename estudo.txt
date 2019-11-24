@@ -73,6 +73,7 @@ vá na pasta do seu computador onde você deu o primeiro comando init
 ~ git push -u origin master
 ~ git remote -v
 
+<<<<<<< HEAD
 4) Ignorando arquivos
  
 criar um arquivo .gitignore e por pastas/arquivos que deseja que não seja upado no github
@@ -94,3 +95,5 @@ Local no bash git:
 
 
 
+=======
+>>>>>>> 08d24aff3219bc0d62554772a4973027cba52650
