@@ -1,0 +1,96 @@
+1) Iniciando o GIT
+
+Entre no diretório que deseja controlar a versão e inicie o Git assim:
+~ git init
+
+Feito isso, seus arquivos ainda não estão sendo versionados, mas eles estão esperando para serem adicionados no estágio de controle. Para fazer isso digite o comando
+~ git add nome-do-arquivo-incluindo-extensão
+
+Se você precisa adicionar todos os arquivos do diretório, basta digitar:
+~ git add -A
+
+Saber o status do projeto é importante. Com o comando abaixo você consegue ver quais arquivos estão fora do controle, quais foram modificados e estão esperando por uma descrição de modificação etc:
+~ git status
+
+Voltando ao estágio anterior do adicionamento:
+~ git reset HEAD nome-do-arquivo
+
+Commit – Comitando:
+~ git commit -m "Mensagem do commit"
+
+
+2) Voltando commits a versões anteriores
+
+Voltando um commit e deixando o arquivo no estagio anterior:
+~ git reset --soft (hash anterior)
+
+Voltando um commit e excluindo o arquivo, deixando no estágio anterior:
+~ git reset --hard (hash anterior)
+
+Verificando o histórico de commits:
+~ git log
+
+Verificando em que branch você está
+~ git branch
+
+Criando um branch:
+~ git branch (nome)
+
+Mudando para o branch criado:
+~ git branch checkout (nome)
+
+Checando o que foi acrescentado no Sublime por exemplo:
+~ git diff
+
+Checar somente o arquivo que foi modificado:
+~ git diff --name-only
+
+Checar somente um arquivo específico:
+~ git diff (nome do arquivo)
+
+Voltar o que tinha feito:
+~ git checkout HEAD -- (nome do arquivo)
+*Sempre que você faz uma alteração num arquivo ele precisará de um commit no bash,
+porém se você fez uma alteração no arquivo mas quer voltar pois não precisa mais
+você da este comando que retornará o que era antes*
+
+3) Conectando repositório local ao remoto
+
+Primeiro passo
+~ ssh-keygen -t rsa -b 4096 -C "seu_email@gmail.com"
+
+Segundo passo
+procurar a chave publica que provavelmente estará em
+C:/Users/filip/.ssh
+e joga no sublime pra poder ler e copiar
+
+Terceiro passo
+Vá no seu user no github > Settings > SSH and GPG Keys > New SSH Key e cola o código lá
+
+Quarto passo
+vá na pasta do seu computador onde você deu o primeiro comando init
+~ git remote add origin https://github.com/fmagarottox/modulogit.git
+~ git push -u origin master
+~ git remote -v
+
+4) Ignorando arquivos
+ 
+criar um arquivo .gitignore e por pastas/arquivos que deseja que não seja upado no github
+
+5) Revertendo commit
+~ git revert --no-edit (código hash do commit)
+para saber o código
+~ git log
+
+*As vezes fazemos uma alteração no codigo que quando colocamos no ar da proplema no sistema
+todo, assim sendo podemos voltar como estava antes com este comando*
+
+6) Deletando branches locais e remotos
+Remoto la no github:
+~ git push origin :teste (nome do branch no caso)
+
+Local no bash git:
+~ git branch -D teste
+
+
+
